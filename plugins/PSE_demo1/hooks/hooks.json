@@ -19,27 +19,6 @@
           }
         ]
       }
-    ],
-    "PreToolUse": [
-      {
-        "matcher": "Bash|Skill",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python \"${CLAUDE_PLUGIN_ROOT}/hooks/guard-ask.py\""
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "powershell -NoProfile -Command \"[System.Media.SystemSounds]::Asterisk.Play(); Start-Sleep -Milliseconds 600\""
-          }
-        ]
-      }
     ]
   }
 }
