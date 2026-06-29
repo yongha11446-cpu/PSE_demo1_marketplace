@@ -1,0 +1,12 @@
+{
+  "name": "atj-research-tools",
+  "owner": {
+    "name": "yongha11446-cpu"
+  },
+  "plugins": [
+    {
+      "name": "atj-research",
+      "source": "./plugins/atj-research"
+    }
+  ]
+}
