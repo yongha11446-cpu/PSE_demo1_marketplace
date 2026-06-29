@@ -1,4 +1,4 @@
-# atj-research — 아스펜 공정모사 연구 비서 플러그인
+# PSE_demo1 — 아스펜 공정모사 연구 비서 플러그인
 
 리그노셀룰로오스 → SAF(ATJ) 같은 화학공정 모사 연구를, 문헌탐색부터 노벨티 도출·가상 시뮬레이션·연구노트 기록까지 한 번에 돕는 Claude Code 플러그인.
 
@@ -26,8 +26,8 @@
 ## 설치
 
 ```
-/plugin marketplace add yongha11446-cpu/atj-research-marketplace
-/plugin install atj-research@atj-research-tools
+/plugin marketplace add yongha11446-cpu/PSE_demo1_marketplace
+/plugin install PSE_demo1@PSE_demo1
 ```
 
 ## 처음 한 번: 글로벌 연구노트 폴더

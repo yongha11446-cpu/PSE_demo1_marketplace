@@ -1,12 +1,12 @@
 {
-  "name": "atj-research-tools",
+  "name": "PSE_demo1",
   "owner": {
     "name": "yongha11446-cpu"
   },
   "plugins": [
     {
-      "name": "atj-research",
-      "source": "./plugins/atj-research"
+      "name": "PSE_demo1",
+      "source": "./plugins/PSE_demo1"
     }
   ]
 }
