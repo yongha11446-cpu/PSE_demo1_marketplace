@@ -27,11 +27,13 @@ try {
     exit 0
 }
 
-# Aspen stream-paste signals (ASCII tokens only, single alternation regex)
-#  - units: kg/hr kmol/hr lb/hr
-#  - flow headers: Mass Flows / Mole Flows
-#  - fraction & property labels: Mass/Mole Fractions, Molar Enthalpy, Vapor Fraction, Average MW
-$isStream = $prompt -match '(kg/hr|kmol/hr|lb/hr|Mass Flows|Mole Flows|Mass Fractions|Mole Fractions|Molar Enthalpy|Vapor Fraction|Average MW)'
+# Trigger ONLY on mass-flow-per-time units (e.g. kg/hr, t/hr, t/d, kg/s, lb/hr).
+# Molar units (mol/kmol), mass/mole fractions, enthalpy, MW, and flow-header
+# labels (Mass Flows / Mole Flows) are intentionally EXCLUDED to keep the
+# trigger narrow and avoid false positives.
+#   mass units: kg mg g t ton tonne mt kt lb lbs klb
+#   time units: s sec min h hr hrs hour d day yr year
+$isStream = $prompt -match '\b(kg|mg|g|t|ton|tonne|mt|kt|lb|lbs|klb)\s*/\s*(s|sec|min|h|hr|hrs|hour|d|day|yr|year)\b'
 
 if ($isStream) {
     $proto = Join-Path $PSScriptRoot 'update_protocol.md'
