@@ -70,6 +70,14 @@ $$r = \frac{(\text{kinetic factor}) \times (\text{driving force expression})}{\t
   - **Enter term**: **Term1, Term2 둘 다 작성** — 각 term에 생성물·반응물의 component 및 exponent 입력, 그리고 driving force 상수 계수 **A, B, C, D** 입력.
 - **Adsorption expression**: adsorption expression exponent, concentration exponents, adsorption constants 입력.
 
+## 4. Catalyst 탭
+- **Catalyst present in reactor** — *현재 비활성화.* 체크하면 아래 촉매 관련 입력이 활성화된다.
+- **Ignore catalyst volume in rate/residence time calculations** — *현재 비활성화.* 체크하면 활성화(속도/체류시간 계산에서 촉매 부피 무시).
+- **Specifications** — 아래 3개 중 **택2** 입력(나머지는 계산):
+  - **Particle density** — 단위: gm/cc, gm/cum, gm/ml, kg/cum, lb/bbl, lb/cuft, lb/gal 중 택1
+  - **Catalyst loading** — 단위: gm, kg, L-ton, lb, Mlb, MMlb, ton, tonne 중 택1
+  - **Bed voidage** (베드 공극률)
+
 ## 적용 시 기억할 것
 - RPlug은 **kinetics 없이는 계산 불가** — 반드시 속도식(POWERLAW/LHHW 등)이 붙은 Reactions가 있어야 한다.
 - 결과는 **길이방향 프로파일**(조성·온도)로 나온다 — 최종 출구값뿐 아니라 위치별 변화도 예측한다.
